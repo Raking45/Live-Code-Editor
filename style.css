@@ -1,0 +1,125 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f7f9fc;
+  color: #333;
+}
+
+header {
+  text-align: center;
+  background: linear-gradient(90deg, #007bff, #00d4ff);
+  color: white;
+  padding: 1.5rem 1rem;
+}
+
+h1 {
+  margin-top: 0.2rem;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  height: calc(100vh - 160px);
+  padding: 1rem;
+  gap: 1rem;
+}
+
+.editor-pane,
+.preview-pane {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+label {
+  font-weight: bold;
+  color: #007bff;
+}
+
+textarea {
+  height: 150px;
+  width: 100%;
+  padding: 10px;
+  font-family: monospace;
+  font-size: 0.9rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background: #ffffff;
+  resize: vertical;
+}
+
+iframe {
+  flex: 1;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background: white;
+}
+
+button {
+  padding: 0.5rem 1rem;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+.dom-toggle {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+}
+
+.dom-toggle input {
+  margin-right: 0.5rem;
+}
+
+.dom-pane {
+  background: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 1rem;
+  max-height: 250px;
+  overflow-y: auto;
+  margin-top: 0.5rem;
+}
+
+.dom-tree {
+  font-family: monospace;
+  font-size: 0.85rem;
+  color: #333;
+  white-space: pre;
+}
+
+.dom-node {
+  margin: 0.2rem 0;
+  cursor: pointer;
+  transition: background 0.2s;
+  user-select: none;
+}
+
+.dom-node:hover {
+  background: #e6f7ff;
+  color: #007bff;
+}
+
+.dom-node.copied {
+  background: #c6f6d5;
+  color: #2f855a;
+}
+
+.tip {
+  font-size: 0.75rem;
+  color: #777;
+  margin-top: 0.5rem;
+}

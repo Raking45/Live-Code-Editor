@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Live Code Editor</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h3>RK Development Studio</h3>
+    <h1>Live Code Editor</h1>
+  </header>
+
+  <main class="container">
+    <section class="editor-pane">
+      <label>HTML</label>
+      <textarea id="html-code" onkeyup="run()"></textarea>
+
+      <label>CSS</label>
+      <textarea id="css-code" onkeyup="run()"></textarea>
+
+      <label>JavaScript</label>
+      <textarea id="js-code" onkeyup="run()"></textarea>
+
+      <button onclick="generateCSS()">Generate CSS Selectors</button>
+    </section>
+
+    <section class="preview-pane">
+      <label>Output</label>
+      <iframe id="output"></iframe>
+
+      <div class="dom-toggle">
+        <label for="dom-interact">
+          <input type="checkbox" id="dom-interact" checked />
+          Enable DOM Interactions
+        </label>
+      </div>
+
+      <div class="dom-pane">
+        <label>DOM Structure</label>
+        <div id="dom-tree" class="dom-tree"></div>
+        <p class="tip">💡 Click to copy selector. Shift+Click to insert into JavaScript.</p>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
